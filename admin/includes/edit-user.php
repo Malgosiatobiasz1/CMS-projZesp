@@ -20,7 +20,7 @@ if(isset($_GET['edit-user'])){
 
     }
 
-    /
+
     if(isset($_POST['edit_user'])) {
         $user_first_name = $_POST['user_first_name'];
         $user_last_name = $_POST['user_last_name'];
