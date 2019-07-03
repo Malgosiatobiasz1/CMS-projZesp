@@ -51,16 +51,17 @@ CREATE TABLE `posts` (
   `post_content` text NOT NULL,
   `post_tags` varchar(255) NOT NULL,
   `post_comment_count` int(11) NOT NULL,
-  `post_status` varchar(255) NOT NULL DEFAULT 'draft'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `post_status` varchar(255) NOT NULL DEFAULT 'draft',
+  `post_cost` decimal NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
-INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`) VALUES
-(6, 2, 'Hearthstone rank 9', 'George Tourtsinakis', '2017-02-02', 'Hearthstone Screenshot 01.png', '<p><strong>hearthstone, rank 9, priest</strong></p>', 'hearthstone, rank 9, priest', 1, 'published'),
-(7, 2, 'This is another post', 'George', '2017-02-02', '', '<p>Just another post</p>', 'second post', 1, 'draft'),
-(8, 2, 'Draft post test', 'Bee', '2017-02-02', '', '<p>draft</p>', 'draft', 0, 'draft'),
-(9, 2, 'frogpaw', 'bogo', '2017-02-02', 'frog.jpg', '<p><strong>Frogs are very good animals and you must not eat them!!!!</strong></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>', '', 0, 'published');
+INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_cost`) VALUES
+(6, 2, 'Hearthstone rank 9', 'George Tourtsinakis', '2017-02-02', 'Hearthstone Screenshot 01.png', '<p><strong>hearthstone, rank 9, priest</strong></p>', 'hearthstone, rank 9, priest', 1, 'published', 10),
+(7, 2, 'This is another post', 'George', '2017-02-02', '', '<p>Just another post</p>', 'second post', 1, 'draft', 2),
+(8, 2, 'Draft post test', 'Bee', '2017-02-02', '', '<p>draft</p>', 'draft', 0, 'draft', 4),
+(9, 2, 'frogpaw', 'bogo', '2017-02-02', 'frog.jpg', '<p><strong>Frogs are very good animals and you must not eat them!!!!</strong></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>', '', 0, 'published', 9);
 
 
 

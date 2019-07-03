@@ -19,33 +19,31 @@
         $post_date =   $row['post_date'];
         $post_image =  $row['post_image'];
         $post_content =  $row['post_content'];
+        $post_cost =  $row['post_cost'];
 
 
 
-?>
+        ?>
 
 
-<h1 class="page-header">
-    Naglowek
-    <small>Tekst</small>
-</h1>
+        <form method="post" action="cardActions.php">
+            <h2>
+                <a href="post.php?p_id=<?php echo "{$post_id}"?>"><?php echo $post_title;?></a>
+            </h2>
+            <!--<p class="lead">-->
+            <!--    by <a href="index.php">--><?php //echo $post_author;?><!--</a>-->
+            <!--</p>-->
+            <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $post_date;?></p>
+            <hr>
+            <img class="img-responsive" src="images/<?php echo $post_image?>" alt="">
+            <hr>
+            <p><?php echo $post_content;?></p>
 
+            <?php echo $post_cost?> zł
 
-<h2>
-    <a href="post.php?p_id=<?php echo "{$post_id}"?>"><?php echo $post_title;?></a>
-</h2>
-<p class="lead">
-    by <a href="index.php"><?php echo $post_author;?></a>
-</p>
-<p><span class="glyphicon glyphicon-time"></span> Dodaj <?php echo $post_date;?></p>
-<hr>
-<img class="img-responsive" src="images/<?php echo $post_image?>" alt="">
-<hr>
-<p><?php echo $post_content;?></p>
-
-<hr>
-
-
-
+            <hr>
+            <input name="id" value="<?php echo "{$post_id}"?>" style="display: none"/>
+            <button type="submit" name="add">+</button>
+        </form>
 
 <?php } 
