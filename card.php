@@ -6,18 +6,19 @@ global $dbconnect;
 if(isset($_SESSION["card"])) {
     $card = $_SESSION["card"]; ?>
 
-    <style>
+   <style>
         #card {
-            max-width: 222px;
+            max-width: 150px;
             position: fixed;
             top: 60px;
             right: 0;
-            background-color: #c7ddef;
-            overflow: auto;
+            background-color:transparent;
+            overflow:hidden;			
         }
     </style>
 
     <div id="card">
+	<p><b>Koszyk</b></p>
 
     <?php
     $i = 0;
