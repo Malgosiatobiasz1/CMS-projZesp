@@ -1,5 +1,3 @@
-
-
 <div class="well">
     <h4>Search</h4>
     <form action="search.php" method="post">
@@ -15,6 +13,7 @@
 </div>
 
 <div class="well">
+    <?php if (! isset($_SESSION['username'])) { ?>
     <h4>Login</h4>
     <form action="includes/login.php" method="post">
         <div class="form-group">
@@ -29,4 +28,8 @@
         </div>
 
     </form>
+<?php } else { ?>
+    <h1>Witaj <?php echo $_SESSION['username']; ?> !</h1>
+        <a href="includes/logout.php"><i class="fa fa-fw fa-power-off"></i>wyloguj</a>
+<?php } ?>
 </div>

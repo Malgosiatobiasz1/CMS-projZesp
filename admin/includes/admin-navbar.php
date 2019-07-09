@@ -43,7 +43,7 @@
                 <a href="index.php"><i class="fa fa-fw fa-dashboard"></i>ustawienia</a>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#posts"><i class="fa fa-fw fa-arrows-v"></i>posty<i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#posts"><i class="fa fa-fw fa-arrows-v"></i>produkty<i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="posts" class="collapse">
                     <li>
                         <a href="posts.php">zobacz wszystkie</a>

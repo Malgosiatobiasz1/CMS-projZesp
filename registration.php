@@ -1,13 +1,8 @@
-
     <?php  include "includes/header.php"; ?>
-
     <?php  include "includes/navbar.php"; ?>
-
-
     <?php
 
     $message = '';
-
 
     if(isset($_POST['register'])){
 
@@ -49,10 +44,12 @@
             confirm($create_user_query);
 
             $message ="Form submitted";
-
         }else {
             $message ="Form wasn't submitted !";
         }
+
+        header('Location: index.php');
+        exit();
 
     }
 

@@ -26,7 +26,7 @@
         ?>
 
 
-        <form method="post" action="cardActions.php">
+        <form method="post" action="cartActions.php">
             <h2>
                 <a href="post.php?p_id=<?php echo "{$post_id}"?>"><?php echo $post_title;?></a>
             </h2>

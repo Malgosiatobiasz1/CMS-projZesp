@@ -24,15 +24,15 @@
                             $source = '';
                         }
                         if($source== ""){
-                            echo "Posts";
+                            echo "Produkty";
                         }else if($source=='add-post'){
-                            echo "Add post";
+                            echo "Dodaj produkty";
                         }else if($source=='edit-post'){
-                            echo "Edit post";
+                            echo "Edytuj produkty";
                         }
 
                         ?>
-                        <small>Author</small>
+<!--                        <small>Author</small>-->
                     </h1>
                     <?php
 

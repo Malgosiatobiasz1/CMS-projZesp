@@ -1,6 +1,6 @@
 <?php include 'includes/header.php' ?>
 
-<?php include 'card.php' ?>
+<?php include 'cart.php' ?>
 <?php include 'includes/navbar.php' ?>
 
 <div class="container">

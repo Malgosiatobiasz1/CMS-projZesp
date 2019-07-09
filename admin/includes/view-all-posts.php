@@ -73,6 +73,7 @@ if(isset($_POST['checkBoxArray'])){
         <th>identyfikator</th>
         <th>autor</th>
         <th>tytul</th>
+        <th>cena</th>
         <th>kategoria</th>
         <th>status</th>
         <th>obraz</th>
@@ -92,6 +93,7 @@ if(isset($_POST['checkBoxArray'])){
         $post_id = $row['post_id'];
         $post_author = $row['post_author'];
         $post_title = $row['post_title'];
+        $post_cost = $row['post_cost'];
         $post_category_id= $row['post_category_id'];
         $post_status= $row['post_status'];
         $post_image= $row['post_image'];
@@ -111,6 +113,7 @@ if(isset($_POST['checkBoxArray'])){
             echo "<td>{$post_id}</td>" ;
             echo "<td>{$post_author}</td>";
             echo "<td>{$post_title}</td>";
+            echo "<td>{$post_cost}zł</td>";
 
 
                 $query = "SELECT * FROM categories WHERE cat_id = $post_category_id";

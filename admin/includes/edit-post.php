@@ -14,6 +14,7 @@ if(isset($_GET['p_id'])) {
         $post_id = $row['post_id'];
         $post_author = $row['post_author'];
         $post_title = $row['post_title'];
+        $post_cost = $row['post_cost'];
         $post_category_id = $row['post_category_id'];
         $post_status = $row['post_status'];
         $post_image = $row['post_image'];
@@ -29,6 +30,7 @@ if(isset($_GET['p_id'])) {
 
 if(isset($_POST['edit_post'])) {
     $post_title = $_POST['post_title'];
+    $post_cost = $_POST['post_cost'];
     $post_category_id = $_POST['post_category'];
     $post_author = $_POST['post_author'];
     $post_status = $_POST['post_status'];
@@ -61,10 +63,15 @@ if(isset($_POST['edit_post'])) {
     $query .= "post_status = '{$post_status}', ";
     $query .= "post_image  = '{$post_image}', ";
     $query .= "post_tags   = '{$post_tags}', ";
-    $query .= "post_content = '{$post_content}' ";
+    $query .= "post_content = '{$post_content}', ";
+    $query .= "post_cost   = $post_cost ";
     $query .= "WHERE post_id = {$url_post_id} ";
     $edit_post = mysqli_query($dbconnect, $query);
 
+//    echo "\n";
+//    echo $query;
+//    echo "\n";
+//    echo "\n";
 
     confirm($edit_post);
 
@@ -86,6 +93,11 @@ if(isset($_POST['edit_post'])) {
     <div class="form-group">
         <label for="post_title">dodaj tytul</label>
         <input id="post_title" type="text" class="form-control" name="post_title" value="<?php echo $post_title;?>">
+    </div>
+
+    <div class="form-group">
+        <label for="post_cost">edytuj cenę</label>
+        <input id="post_cost" type="text" class="form-control" name="post_cost" value="<?php echo $post_cost;?>">
     </div>
 
     <div class="form-group">
