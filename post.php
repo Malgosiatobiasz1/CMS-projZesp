@@ -1,7 +1,6 @@
 <?php include 'includes/header.php' ?>
 
 <?php include 'includes/navbar.php' ?>
-<?php include 'cart.php' ?>
 
     <div class="container">
 
@@ -118,6 +117,8 @@
         <div class="col-md-4">
 
             <?php include 'includes/sidebar.php'?>
+
+            <?php include 'cart.php' ?>
 
         </div>
 
