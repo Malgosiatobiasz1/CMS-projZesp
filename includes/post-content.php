@@ -30,20 +30,18 @@
             <h2>
                 <a href="post.php?p_id=<?php echo "{$post_id}"?>"><?php echo $post_title;?></a>
             </h2>
-            <!--<p class="lead">-->
-            <!--    by <a href="index.php">--><?php //echo $post_author;?><!--</a>-->
-            <!--</p>-->
+
+            <?php echo $post_cost?> zł<br/>
+
             <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $post_date;?></p>
             <hr>
             <img class="img-responsive" src="images/<?php echo $post_image?>" alt="">
             <hr>
             <p><?php echo $post_content;?></p>
 
-            <?php echo $post_cost?> zł
-
             <hr>
             <input name="id" value="<?php echo "{$post_id}"?>" style="display: none"/>
-            <button type="submit" name="add">+</button>
+            <button class="btn btn-primary" type="submit" name="add">+ Dodaj do koszyka</button>
         </form>
 
 <?php } 
